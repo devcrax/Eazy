@@ -12,5 +12,6 @@ python2 Eazy.py
 ```
 ## required modules
 * `requests`<br>
+* `bs4`<br>
 ## usage
 just type <code>help</code> or <code>help more</code>

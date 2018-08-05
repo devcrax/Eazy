@@ -12,10 +12,10 @@ webkit_dict = {'traceroute':'mtr',
 'shared_dns':'findshareddns',
 'zone_test':'zonetransfer',
 'whois':'whois',
-'reverse ip':'reverseiplookup',
+'reverse_ip':'reverseiplookup',
 'port':'nmap',
 'subnet':'subnetcalc',
-'http headers':'httpheaders',
+'http_headers':'httpheaders',
 'pagelinks':'pagelinks'}
 
 import requests

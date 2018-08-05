@@ -1,6 +1,6 @@
 <h2>Eazy Framework</h2>
 <img align="left" width="120" height="120" src="https://i.imgur.com/63TSBiM.png">
-<p><h1> Eazy Framework</h<br>best tools for information gathering <br> and web security testing.<br><br><br></p> 
+<p><br>best tools for information gathering <br> and web security testing.<br><br><br></p> 
 
 ## Installation [Android](https://wikipedia.org/wiki/Android) [![alt tag](https://cdn1.iconfinder.com/data/icons/logotypes/32/android-32.png)](https://fr.wikipedia.org/wiki/Android)
  

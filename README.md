@@ -1,6 +1,6 @@
 <h2>Eazy Framework</h2>
 <img align="left" width="120" height="120" src="https://i.imgur.com/63TSBiM.png">
-<p>best tools for information gathering and web security testing.<br>      ⭐ All in one tool for Information Gathering ⭐ </p> 
+<p>best tools for information gathering and web security testing.</p> 
 
 
 ## Installation [Android](https://wikipedia.org/wiki/Android) [![alt tag](https://cdn1.iconfinder.com/data/icons/logotypes/32/android-32.png)](https://fr.wikipedia.org/wiki/Android)

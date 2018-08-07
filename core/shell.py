@@ -15,6 +15,8 @@ from module.brute    import *
 from module.encdec   import *
 from module.scanner  import *
 from module.wp_exp   import *
+from module.xssy     import *
+from module.joomsql  import j_sql
 from module.wp_user  import user_scan
 from module.userpro  import check_vuln
 from module.nmap     import bintari as debby_lovlov
@@ -59,6 +61,10 @@ def debby_anggraini():
                 subdo(arg['-u'])
             elif wibu[0] == 'honeypot':
                 honey(arg['-u'])
+            elif wibu[0] == 'joom_sql_scan':
+                 j_sql(arg['-u'])
+            elif wibu[0] == 'xss_scan':
+                 xss(arg['-u'])
             # exploit module
 	    elif wibu[0] == 'wpscan':
                 wpscan(arg['-u'])

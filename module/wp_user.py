@@ -43,7 +43,7 @@ def user_scan(url,usern):
             site = 'http://' + url
     else:
         site = url
-    printf('wait a minute, scanning (%s)' % site)
+    printf('[+] wait a minute, scanning (%s)' % site)
     for x in range(0,int(usern)):
         try:
             tmp = curllib(site, '', urllib.urlencode({"author":(x+1)}))
@@ -56,9 +56,9 @@ def user_scan(url,usern):
         if len(tmp['user']):
             results.append(tmp)
     if not results:
-        printf('\nCould not find anything, maybe not vulnerable!')
+        printf('[!] Could not find anything, maybe not vulnerable!')
         return
     results = sort_and_deduplicate(results)
-    print("Found "+str( len( results ) )+" users in "+site+"")
+    print("[+] Found "+str( len( results ) )+" users in "+site+"")
     for i in range(0,len(results)):
-         printf('\nuser: %s\nname: %s' % (results[i]['user'],results[i]['name']))
+         printf(' user: %s\n name: %s' % (results[i]['user'],results[i]['name']))

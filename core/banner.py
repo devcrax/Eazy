@@ -33,6 +33,6 @@ def banner():
             ""9@#####@M""           ""P@#####@M""\033[0m
 
              x--[      Eazy Framework      ]--x
-             x--[   50 tools * 7 payload   ]--x
-             x--[  3 exploit * 38 scanner  ]--x
+             x--[   50 tools * 8 payload   ]--x
+             x--[  3 exploit * 39 scanner  ]--x
 ''')

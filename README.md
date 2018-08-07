@@ -19,7 +19,8 @@ python2 Eazy.py
 ## usage
 just type <code>help</code> or <code>help more</code>
 <br>
-<h3>changelog</h4><br
+<br>
+<h3>changelog</h4>
 August 7, 2018<br>
 * added 1 scanner: LFI scanner<br>
 * logo change

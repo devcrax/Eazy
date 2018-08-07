@@ -10,7 +10,7 @@ from core.misc     import printf
 
 finder_array = ['adfin','upload','shell','dirscan','wpscan','user_pro','lfi_scan','joom_sql_scan']
 def hell(text,name):
-    printf('\nUsage: ' + str(name) + ' [arguments]\n\noptional arguments:\n  -h, --help\t\tshow this help message\n' + text)
+    printf('\nUsage: ' + str(name) + ' [arguments]\n\noptional arguments:\n  -h, --help\tshow this help message\n' + text)
 def usage(name):
    if name in webkit_dict or name in ['mxrecords','domain_age','whatcms','subdomain','geoip','honeypot']:
       printf('[!] Usage: %s [-h] -u <hostname>'%name)
@@ -30,20 +30,20 @@ def usage(name):
       printf('[!] Usage: %s [-h] -u <url> -f <file>'%name)
 def help_menu(name):
     if name in webkit_dict or name in ['mxrecords','domain_age','whatcms','subdomain','geoip','honeypot']:
-        hell('  -u <hostname>\t\thostname or domain name',name)
+        hell('  -u <hostname>\thostname or domain name\n',name)
     elif name in encdec_array:
-        hell('  -e, --enc\t\tencode strings\n  -d, --dec\t\tdecode strings',name)
+        hell('  -e, --enc\tencode strings\n  -d, --dec\tdecode strings\n',name)
     elif name in finder_array:
-        hell('  -u <url>\t\twebsite target to scanning',name)
+        hell('  -u <url>\twebsite target to scanning\n',name)
     elif name == 'nmap':
-        hell('  -u\t\t\thostname or domain name\n  -t\t\t\ttype to scanning',name)
+        hell('  -u\t\thostname or domain name\n  -t\t\ttype to scanning\n',name)
     elif name in hash_array:
-        hell('  -s <string>\t\tstring to hashing',name)
+        hell('  -s <string>\tstring to hashing\n',name)
     elif name == 'dork':
-        printf('\nUsage: %s [arguments]\n\npositional arguments:\n  string\t\tdork, example: inurl:\'.php?id=\'\n\noptional arguments:\n  -s\t\t\tscan sql error' % name)
+        printf('\nUsage: %s [arguments]\n\npositional arguments:\n  string\tdork, example: inurl:\'.php?id=\'\n\noptional arguments:\n  -s\t\tscan sql error\n' % name)
     elif name == 'wp_user':
-        hell('  -u <url>\t\twebsite target to scanning\n  -n <num>\t\tnumber of users',name)
+        hell('  -u <url>\twebsite target to scanning\n  -n <num>\tnumber of users\n',name)
     elif name == 'wp_sym_exp':
-        hell('  -u <url>\t\ttarget url\n  -f <file>\t\tfile name to upload',name)
+        hell('  -u <url>\ttarget url\n  -f <file>\tfile name to upload\n',name)
     else:
         printf('%s: not found' % name,2)

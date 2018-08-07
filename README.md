@@ -13,8 +13,8 @@ git clone https://github.com/CiKu370/Eazy.git
 cd Eazy
 python2 Eazy.py
 ```
-## required modules
-* `requests`<br>
-* `bs4`<br>
+## dependencies
+* Python 2.7.x
+* Python module to install: `requests`,`bs4`
 ## usage
 just type <code>help</code> or <code>help more</code>

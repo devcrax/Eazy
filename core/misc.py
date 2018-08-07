@@ -46,6 +46,7 @@ def show_modules(t = None):
  upload            search upload pages.
  wpscan            wordpress plugins scanners.
  lfi_scan          scan Local File Inclusion vulnerabilities.
+ joom_sql_scan     joomla sqli scanner.
  {0}
  exploit{1}
  =======

@@ -18,3 +18,8 @@ python2 Eazy.py
 * Python module to install: `requests`,`bs4`
 ## usage
 just type <code>help</code> or <code>help more</code>
+<br>
+<h3>changelog</h4><br>
+August 7, 2018<br>
+* added 1 scanner: LFI scanner
+* logo change

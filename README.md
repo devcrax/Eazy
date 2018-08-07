@@ -23,5 +23,5 @@ just type <code>help</code> or <code>help more</code>
 <h3>changelog</h4>
 August 7, 2018<br>
 * added 1 scanner: LFI scanner<br>
-* added 1 exploit: Wp_Symposium_exploit<br>
+* added 2 exploit: Wp_Symposium_exploit, wp_user_enumerate<br>
 * logo change

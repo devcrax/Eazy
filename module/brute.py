@@ -9,29 +9,28 @@
 
 from core.misc import printf
 from time      import strftime as u
+import re
 import requests
 import sys
 import json
 
 # start brute force attack
 def parse(web):
-     if web.startswith('https://') or web.startswith('http://'):
-          return web
+     if 'http' not in web:
+         try:
+             requests.get('https://' + web)
+             return('https://' + web)
+         except:
+             return('http://' + web)
      else:
-          try:
-               requests.get('https://' + web)
-               return('https://' + web)
-          except:
-               return('http://' + web)
+         return web
 def start(web,path):
-     for i in path:
+    printf('[+] wait a minute, scanning (%s)' % web)
+    for i in path:
         i = i.strip()
         r = requests.get(web+i)
         if r.status_code == 200:
-            code = '\033[92m%s\033[0m'%r.status_code
-        else:
-            code = '\033[91m%s\033[0m'%r.status_code
-        printf('%s [%s]'%(r.url,code))
+            printf(' %s' % (web + i))
 # admin panel finder
 def adfin(web):
      path = open('core/wordlist/admin.txt','r').readlines()
@@ -52,3 +51,12 @@ def dir(web):
 def wpscan(web):
     path = open('core/wordlist/plugins.txt','r').readlines()
     start(parse(web) + '/wp-content/plugins/',path)
+def lfiscan(web):
+    url = parse(web)
+    printf('[+] wait a minute, scanning (%s)' % url)
+    lfis = open('core/wordlist/lfi.txt','r').readlines()
+    for lfi in lfis:
+        check = requests.get(url + lfi.strip()).text
+        if re.findall("root:x", check):
+            printf(' %s' % web + lfi.strip())
+            break

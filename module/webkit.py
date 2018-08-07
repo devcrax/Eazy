@@ -33,24 +33,24 @@ def hackertarget(i,t):
 def mx(t):
     r = requests.get('https://dns-api.org/MX/' + t)
     a = json.loads(r.text)
-    printf('domain name for MX records')
+    printf(' domain name for MX records')
     for i in a:
-        printf('%s'%str(i['value']))
+        printf(' %s'%str(i['value']))
 def domage(t):
     r = requests.get('https://input.payapi.io/v1/api/fraud/domain/age/' + t)
     a = json.loads(r.text)
     try:
-        printf('%s'%a['message'])
+        printf(' %s'%a['message'])
     except KeyError:
-        printf('incorrect Input')
+        printf('[!] incorrect Input')
 def cms(t):
     r = requests.get('https://whatcms.org/APIEndpoint?key=745aaac9fc2d1acc0e20330469b1db3979be347b5542b3b5b790b42d10cb68cac78c2f&url=' + t)
     a = json.loads(r.text)
     if a['result']['msg'] == 'Success':
        for i in a['result']:
-          printf('%s: %s'%(str(i),str(a['result'][i])))
+          printf(' %s: %s'%(str(i),str(a['result'][i])))
     else:
-       printf('%s'%str(a['result']['msg']))
+       printf('[!] %s'%str(a['result']['msg']))
 def subdo(t):
     subdomains = []
     req = requests.get("https://crt.sh/?q=%.{d}&output=json".format(d=t))
@@ -60,20 +60,20 @@ def subdo(t):
                 subdomains.append(value['name_value'])
         sub = sorted(set(subdomains))
         for subdomain in sub:
-                printf('%s'%subdomain)
+                printf(' %s'%subdomain)
     else:
-        printf("Information not available!")
+        printf("[!] Information not available!")
 def honey(ip):
     honey = "https://api.shodan.io/labs/honeyscore/" + ip + "?key=C23OXE0bVMrul2YeqcL7zxb6jZ4pj2by"
     try:
         phoney = urlopen(honey).read().decode('utf-8')
     except URLError:
         phoney = None
-        printf('No information available for that IP!')
+        printf('[!] No information available for that IP!')
     if phoney:
-        print('Honeypot Probabilty: {probability}'.format(probability=float(phoney) * 10))
+        print('[+] Honeypot Probabilty: {probability}'.format(probability=float(phoney) * 10))
 def geoip(web):
     r = requests.get('https://tools.keycdn.com/geo.json?host=' + web)
     a = json.loads(r.text)
     for i in a['data']['geo']:
-        printf('%s: %s'%(str(i).replace('_',' '),str(a['data']['geo'][i])))
+        printf(' %s: %s'%(str(i).replace('_',' '),str(a['data']['geo'][i])))

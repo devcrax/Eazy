@@ -42,83 +42,73 @@ errors = {'MySQL': 'error in your SQL syntax',
              'Not found' : 'Not found'}
 
 def hash_scan():
-     hash = raw_input('Enter hash: ')
-     if hash == None:
-        printf('Invalid hash',2)
-     printf(' https://lea.kz')
+     hash = raw_input('\033[93m[?]\033[0m Enter hash: ')
+     if hash == None and len(hash) not in [32,40,64,96]:
+        printf('[!] Invalid hash',2)
      response = requests.get('https://lea.kz/api/hash/' + hash).text
      match = search(r': "(.*?)"', response)
      if match:
-         printf('hashed string: ' + match.group(1))
+         printf('[+] hashed string: ' + match.group(1))
      else:
-         printf(' https://md5.my-addr.com')
          data = {'md5' : hash, 'x' : '21', 'y' : '8'}
          response = requests.post('http://md5.my-addr.com/md5_decrypt-md5_cracker_online/md5_decoder_tool.php', data).text
          match = search(r'<span class=\'middle_title\'>Hashed string</span>: [^<]*</div>', response)
          if match:
-             printf('hashed string: ' + match.group(1))
+             printf('[+] hashed string: ' + match.group(1))
          else:
              if len(hash) == 32:
-                 printf(' http://www.nitrxgen.net')
                  response = requests.get('http://www.nitrxgen.net/md5db/' + hash).text
                  if len(response) > 0:
-                     printf('hashed string: ' + response)
+                     printf('[+] hashed string: ' + response)
                  else:
-                     printf(' https://hashtoolkit.com')
                      r = requests.get('https://hashtoolkit.com/reverse-md5-hash/'+hash)
                      match = search(r'<span title="decrypted md5 hash">(.*?)</span>',r.text)
                      if match:
-                         printf('hashed string: ' + match.group(1))
+                         printf('[+] hashed string: ' + match.group(1))
                      else:
-                         printf(' https://md5.gromweb.com')
                          r = requests.get('https://md5.gromweb.com/?md5='+hash)
                          match = search(r'<em class="long-content string">(.*?)</em></p>',r.text)
                          if match:
-                             printf('hashed string: ' + match.group(1))
+                             printf('[+] hashed string: ' + match.group(1))
                          else:
-                             printf('string not found')
+                             printf('[!] string not found')
              elif len(hash) == 40:
-                 printf(' http://hashcrack.com')
                  data = {'auth':'8272hgt', 'hash':hash, 'string':'','Submit':'Submit'}
                  response = requests.post('http://hashcrack.com/index.php' , data).text
                  match = search(r'<span class=hervorheb2>(.*?)</span></div></TD>', response)
                  if match:
-                     printf('hashed string: ' + match.group(1))
+                     printf('[+] hashed string: ' + match.group(1))
                  else:
-                     printf(' https://sha1.gromweb.com')
                      r = requests.post('https://sha1.gromweb.com/?hash='+hash)
                      match = search(r'<em class="long-content string">(.*?)</em></p>',r.text)
                      if match:
-                         printf('hashed string: ' +  match.group(1))
+                         printf('[+] hashed string: ' +  match.group(1))
                      else:
-                         printf('string not found')
+                         printf('[!] string not found')
              elif len(hash) == 64:
-                 printf(' http://md5decrypt.net')
                  response = requests.get('http://md5decrypt.net/Api/api.php?hash=%s&hash_type=sha256&email=deanna_abshire@proxymail.eu&code=1152464b80a61728' % hash).text
                  if len(response) != 0:
-                     printf('hashed string: ' + response)
+                     printf('[+] hashed string: ' + response)
                  else:
-		     printf(' https://hashtoolkit.com')
 		     r = requests.get('https://hashtoolkit.com/reverse-sha256-hash/' + hash)
 		     match = search(r'<span title="decrypted sha256 hash">(.*?)</span>',r.text)
 		     if match:
-			 printf('hashed string: ' + match.group(1))
+			 printf('[+] hashed string: ' + match.group(1))
 		     else:
-                         printf('string not found')
+                         printf('[!] string not found')
 	     elif len(hash) == 96:
-                 printf(' https://hashtoolkit.com')
                  r = requests.get('http://hashtoolkit.com/decrypt-sha384-hash/' + hash)
 		 match = search(r'<span title="decrypted sha384 hash">(.*?)</span>',r.text)
                  if match:
-		     printf('hashed string:' + match.group(1))
+		     printf('[+] hashed string:' + match.group(1))
                  else:
-                     printf('string not found')
+                     printf('[!] string not found')
              else:
-                printf( 'hash not supported')
+                printf('[!] hash not supported')
 def dorking(string , sqlscan = None):
     debby = 0
     urls = []
-    printf('Searching..')
+    printf('[+] Searching..')
     for i in range(1,3):
         payload = { 'q' : string , 'start' : i }
         headers = { 'User-agent' : 'Mozilla/11.0' }
@@ -141,17 +131,17 @@ def dorking(string , sqlscan = None):
             except:
                 continue
     if len(urls) == 0:
-        printf('no url found',2)
+        printf('[!] no url found',2)
     elif sqlscan == None:
         for i in urls:
-            printf('%s' % i)
+            printf(' %s' % i)
     else:
         for url in urls:
             if '=' in url or '?' in url:
                 source = requests.get(url + "'").text
                 for type,eMSG in errors.items():
                     if re.search(eMSG, source):
-                        printf('%s [\033[92m%s\033[0m]' % (url,type))
+                        printf(' %s [\033[92m%s\033[0m]' % (url,type))
                         debby += 1
         if debby == 0:
-            printf('no url found',2)
+            printf('[!] no url found',2)

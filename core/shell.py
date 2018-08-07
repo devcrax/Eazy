@@ -6,18 +6,19 @@
 
 # import modules
 import os
-from core.parse     import toxic
-from core.banner    import banner
-from core.misc      import *
-from core.complete  import *
-from module.webkit  import *
-from module.brute   import *
-from module.encdec  import *
-from module.scanner import *
-from module.wp_user import user_scan
-from module.userpro import check_vuln
-from module.nmap    import bintari as debby_lovlov
-from core.error     import *
+from core.parse      import toxic
+from core.banner     import banner
+from core.misc       import *
+from core.complete   import *
+from module.webkit   import *
+from module.brute    import *
+from module.encdec   import *
+from module.scanner  import *
+from module.wp_exp   import *
+from module.wp_user  import user_scan
+from module.userpro  import check_vuln
+from module.nmap     import bintari as debby_lovlov
+from core.error      import *
 
 # shell script
 def debby_anggraini():
@@ -27,10 +28,10 @@ def debby_anggraini():
     # loop forever :v
     while True:
         try:
-            an = raw_input('\033[94mEazy \033[0m>> ')
+            an = raw_input('Eazy_> ')
             wibu = an.split()
             # parse argument manual XD
-            arg = toxic(wibu,'-u,-t,-s,-n')
+            arg = toxic(wibu,'-u,-t,-s,-n,-f')
             # if an == '' or len(wibu) == 0:
             if not wibu:
                 pass
@@ -58,13 +59,18 @@ def debby_anggraini():
                 subdo(arg['-u'])
             elif wibu[0] == 'honeypot':
                 honey(arg['-u'])
+            # exploit module
 	    elif wibu[0] == 'wpscan':
                 wpscan(arg['-u'])
             elif wibu[0] == 'user_pro':
                 check_vuln(arg['-u'])
             elif wibu[0] == 'wp_user':
                 user_scan(arg['-u'],arg['-n'])
+            elif wibu[0] == 'wp_sym_exp':
+                exploit_wp(arg['-u'],arg['-f'])
             # scanner module
+            elif wibu[0] == 'lfi_scan':
+                lfiscan(arg['-u'])
             elif wibu[0] == 'hashbuster':
                 hash_scan()
             elif wibu[0] == 'shell':
@@ -78,7 +84,7 @@ def debby_anggraini():
 		elif '-s' in an:
                     dorking(msg,'scan')
                 else:
-                    dorking(msg)
+                    dorking(msg,)
             # brute force module
             elif wibu[0] == 'adfin':
                 adfin(arg['-u'])
@@ -120,5 +126,5 @@ def debby_anggraini():
         except (requests.exceptions.ConnectionError):
             printf('Connection Error..',2)
         except Exception as e:
-            printf(str(e),2)
+            printf('%s' % str(e),2)
 # EOF

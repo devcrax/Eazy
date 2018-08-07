@@ -24,6 +24,6 @@ just type <code>help</code> or <code>help more</code>
 August 7, 2018<br>
 * added 2 scanner: LFI scanner,joomla sql scanner<br>
 * added 2 exploit: Wp_Symposium_exploit, wp_user_enumerate<br>
-* logo change
+* logo change<br>
 August 8, 2018<br>
 * added 1 scanner: xss payloads scanner<br>

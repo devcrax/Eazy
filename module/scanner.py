@@ -109,7 +109,7 @@ def dorking(string , sqlscan = None):
     debby = 0
     urls = []
     printf('[+] Searching..')
-    for i in range(1,3):
+    for i in range(1,10):
         payload = { 'q' : string , 'start' : i }
         headers = { 'User-agent' : 'Mozilla/11.0' }
         req = requests.get( 'http://www.google.com/search',payload, headers = headers )
@@ -130,18 +130,18 @@ def dorking(string , sqlscan = None):
                 urls.append(h3.find('a').attrs['href'].replace('%3F','?').replace('%3D','='))
             except:
                 continue
+    urls = sorted(set(urls))
     if len(urls) == 0:
-        printf('[!] no url found',2)
+        printf('[!] no url found')
     elif sqlscan == None:
         for i in urls:
             printf(' %s' % i)
     else:
         for url in urls:
-            if '=' in url or '?' in url:
-                source = requests.get(url + "'").text
-                for type,eMSG in errors.items():
-                    if re.search(eMSG, source):
-                        printf(' %s [\033[92m%s\033[0m]' % (url,type))
-                        debby += 1
+            source = requests.get(url + "'").text
+            for type,eMSG in errors.items():
+                if re.search(eMSG, source):
+                    printf(' %s [\033[92m%s\033[0m]' % (url,type))
+                    debby += 1
         if debby == 0:
-            printf('[!] no url found',2)
+            printf('[!] no url found')

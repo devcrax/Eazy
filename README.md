@@ -5,8 +5,8 @@
 ![Version 1.13](https://img.shields.io/badge/Version-1.13-green.svg)
 ![Python 2.7.x](https://img.shields.io/badge/Python-2.7.x-yellow.svg)
 
-You can use this Framework on your website to check the security of your website by finding the vulnerability in your website or you can use this tool to get admin panel search. SQL injection by dork as well as collecting information and encrypting Hash<br>
-✔ Features
+You can use this Framework on your website to check the security of your website by finding the vulnerability in your website or you can use this tool to get admin panel search. SQL injection by dork as well as collecting information and encrypting Hash<br><br>
+✔ Features<br>
 [Information modules](https://www.google.co.id/amp/s/www.collinsdictionary.com/amp/english/information-gathering)<br>
 * port scanner<br>
 * traceroute using MTR<br>

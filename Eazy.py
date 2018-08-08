@@ -24,7 +24,7 @@ def check_update():
     import os
     import requests
     cek = requests.get('https://raw.githubusercontent.com/CiKu370/Eazy/master/Eazy.py')
-    for i in cek.text:
+    for i in cek.text.split('\n'):
          if 'version = ' in i:
              k = i[10:]
              if k != version:

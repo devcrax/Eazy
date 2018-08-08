@@ -16,6 +16,7 @@ from module.encdec   import *
 from module.scanner  import *
 from module.wp_exp   import *
 from module.xssy     import *
+from module.rce      import rcevuln
 from module.joomsql  import j_sql
 from module.wp_user  import user_scan
 from module.userpro  import check_vuln
@@ -65,6 +66,8 @@ def debby_anggraini():
                  j_sql(arg['-u'])
             elif wibu[0] == 'xss_scan':
                  xss(arg['-u'])
+            elif wibu[0] == 'rce_scan':
+                 rcevuln(arg['-u'])
             # exploit module
 	    elif wibu[0] == 'wpscan':
                 wpscan(arg['-u'])
@@ -113,7 +116,7 @@ def debby_anggraini():
 		     printf('sh: commands not found',2)
                  os.system(an[2:])
             elif wibu[0] in ['q','quit']:
-                printf('bye bye..')
+                printf('[!] bye bye..')
                 break
             elif an == 'show modules' or an == 'help':
                 show_modules()
@@ -131,6 +134,6 @@ def debby_anggraini():
         # handle error
         except (requests.exceptions.ConnectionError):
             printf('Connection Error..',2)
-        except Exception as e:
-            printf('%s' % str(e),2)
+#        except Exception as e:
+ #           printf('%s' % str(e),2)
 # EOF

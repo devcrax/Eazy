@@ -17,7 +17,7 @@
 ## github: https://github.com/ciku370
 ##
 
-version = 1.19
+version = '1.19'
 
 def check_update():
     from core.misc import printf

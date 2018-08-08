@@ -8,7 +8,7 @@ from module.webkit import *
 from module.encdec import *
 from core.misc     import printf
 
-finder_array = ['adfin','upload','shell','dirscan','wpscan','user_pro','lfi_scan','joom_sql_scan','xss_scan']
+finder_array = ['adfin','upload','shell','dirscan','wpscan','user_pro','lfi_scan','joom_sql_scan','xss_scan','rce_scan']
 def hell(text,name):
     printf('\nUsage: ' + str(name) + ' [arguments]\n\noptional arguments:\n  -h, --help\tshow this help message\n' + text)
 def usage(name):

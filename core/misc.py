@@ -7,11 +7,11 @@
 def printf(msg,code = 0):
     msg = msg.replace('{0}','\033[91m').replace('{1}','\033[0m').replace('[+]','\033[94m[+]\033[0m').replace('[!]','\033[91m[!]\033[0m').replace('[?]','\033[94m[?]\033[0m')
     if code == 0:
-        print('\033[0m%s\033[0m'%msg)
+        print('\r\033[0m%s\033[0m'%msg)
     elif code == 1:
-        print("\033[0m[\033[92m%s\033[0m] %s"%(u(" %T "),msg))
+        print("\r\033[0m[\033[92m%s\033[0m] %s"%(u(" %T "),msg))
     elif code == 2:
-        print("\033[91m[!] \033[0mError: %s"%msg)
+        print("\r\033[91m[!] \033[0mError: %s"%msg)
 
 def show_modules(t = None):
     if t == None or t == 'wibu bau bawang':
@@ -47,6 +47,8 @@ def show_modules(t = None):
  wpscan            wordpress plugins scanners.
  lfi_scan          scan Local File Inclusion vulnerabilities.
  joom_sql_scan     joomla sqli scanner.
+ xss_scan          XSS payload scanner (GET method).
+ rce_scan          remote code/command excecution scanner.
  {0}
  exploit{1}
  =======

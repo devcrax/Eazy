@@ -24,15 +24,15 @@ def banner():
    J#@"             0L  "*##     ##@"  J#              *#K
    #"               `#    "_gmwgm_~    dF               `#_
   7F                 "#_   ]#####F   _dK                 JE
-  ]                    *m__ ##### __g@"                   F
-                          "PJ#####LP"
+  ]                    *m__ ##### __g@"                  F
+                         "PJ#####LP"
    `                       0######_                      '
                          _0########_
        .               _d#####^#####m__              ,
         "*w_________am#####P"   ~9#####mw_________w*"
             ""9@#####@M""           ""P@#####@M""\033[0m
 
-             x--[      Eazy Framework      ]--x
-             x--[   50 tools * 8 payload   ]--x
-             x--[  3 exploit * 39 scanner  ]--x
+             x--[    Eazy Framework 1.9    ]--x
+             x--[   51 tools * 8 payload   ]--x
+             x--[  3 exploit * 40 scanner  ]--x
 ''')

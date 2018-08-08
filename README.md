@@ -14,13 +14,20 @@ You can use this Framework on your website to check the security of your website
 * wordpress user enumerate<br>
 * and more..
 
-
+ 
+## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
+```
+git clone https://github.com/Ciku370/Eazy.git
+cd Eazy
+python2 Eazy.py
+```
 ## Installation [Android](https://wikipedia.org/wiki/Android) [![alt tag](https://cdn1.iconfinder.com/data/icons/logotypes/32/android-32.png)](https://fr.wikipedia.org/wiki/Android)
  
 Download [Termux](https://play.google.com/store/apps/details?id=com.termux)
 ```
 git clone https://github.com/CiKu370/Eazy.git
 cd Eazy
+chmod 777 Eazy.py
 python2 Eazy.py
 ```
 ## dependencies

@@ -47,6 +47,7 @@ python2
 ## usage
 just type <code>help</code> or <code>help more</code>
 <br>
+<i>Eazy is licensed under the [MIT License](https://github.com/ciku370/Eazy/LICENSE)</i>
 <br>
 <h3>changelog</h4>
 <b>August 7, 2018</b><br>

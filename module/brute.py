@@ -30,15 +30,33 @@ def start(web,path):
         i = i.strip()
         r = requests.get(web+i)
         if r.status_code == 200:
-            printf(' %s' % (web + i))
+            code = '\033[92m%s\033[0m' % r.status_code
+        else:
+            code = '\033[91m%s\033[0m' % r.status_code
+        printf('%s [%s]' % (web + i,code))
 # admin panel finder
 def adfin(web):
      path = open('core/wordlist/admin.txt','r').readlines()
      start(parse(web) + '/',path)
 # upload pages finder
 def upload(web):
+     payloads = {}
      path = open('core/wordlist/upload.txt','r').readlines()
-     start(parse(web) + '/',path)
+     url = parse(web)
+     printf('[+] scanning (%s)' % url)
+     for i in path:
+         x = i.strip().split(':')
+         try:
+             payloads.update({x[0]:x[1]})
+         except IndexError:
+             pass
+     for i in payloads:
+         r = requests.get(url + '/' + payloads[i])
+         if r.status_code == 200:
+              printf(' %s [\033[92mVuln\033[0m]' % i)
+              printf('  => link: %s' % r.url)
+         else:
+              printf(' %s [\033[91mNot Vuln\033[0m]' % i)
 # shell scanner
 def shell(web):
      path = open('core/wordlist/shells','r').readlines()

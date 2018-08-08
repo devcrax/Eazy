@@ -14,7 +14,7 @@ def main(url, payloads, check):
     for params in url.split("?")[1].split("&"):
         for payload in payloads:
             bugs = url.replace(params, params + str(payload).strip())
-            request = useragent.open(bugs)
+            request = urllib.urlopen(bugs)
             html = request.readlines()
             for line in html:
                 checker = re.findall(check, line)

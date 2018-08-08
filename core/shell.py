@@ -134,6 +134,6 @@ def debby_anggraini():
         # handle error
         except (requests.exceptions.ConnectionError):
             printf('Connection Error..',2)
-#        except Exception as e:
- #           printf('%s' % str(e),2)
+        except Exception as e:
+            printf('%s' % str(e),2)
 # EOF

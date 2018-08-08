@@ -1,11 +1,11 @@
 <h1>Eazy Framework 🌐</h1>
 <img align="left" width="120" height="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfEPSuQyr9zsm0pxBeOeFsR52J95TqCnvhm-9dacZi_k00ze91">
-<p><br><i>best framework for information gathering <br> and pentesting.</i><br><br><br></p> 
+<p><br><i><b>best framework for information gathering <br> and pentesting.<b></i><br><br><br></p> 
 
 ![Version 1.13](https://img.shields.io/badge/Version-1.13-green.svg)
 ![Python 2.7.x](https://img.shields.io/badge/Python-2.7.x-yellow.svg)
 
-You can use this Framework on your website to check the security of your website by finding the vulnerability in your website or you can use this tool to get admin panel search. SQL injection by dork as well as collecting information and encrypting Hash<br><br>
+You can use this Framework on your website to check the security of your website by searching for vulnerabilities on your website or you can use this tool to search the admin panel or search for the upload panel contained on your website. SQL injection by dork and collect information.<br><br>
 ✔ Features<br>
 * port scanner<br>
 * traceroute using MTR<br>

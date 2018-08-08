@@ -1,4 +1,4 @@
-<h1>Eazy Framework 🌐</h1>
+<center><h1>Eazy Framework </h1></center>
 <img align="left" width="120" height="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfEPSuQyr9zsm0pxBeOeFsR52J95TqCnvhm-9dacZi_k00ze91">
 <p><br><i><b>best framework for information gathering <br> and pentesting.</b></i><br><br><br></p> 
 

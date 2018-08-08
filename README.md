@@ -30,6 +30,17 @@ cd Eazy
 chmod 777 Eazy.py
 python2 Eazy.py
 ```
+
+ 
+## Installation [Windows ](https://wikipedia.org/wiki/Microsoft_Windows)[![alt tag](http://icons.iconarchive.com/icons/tatice/cristal-intense/32/Windows-icon.png)](https://fr.wikipedia.org/wiki/Microsoft_Windows)
+```bash
+Download Python2
+Download Eazy
+Extract Eazy into Desktop
+Open CMD and type the following commands:
+cd Desktop/Eazy-master/
+python2
+```
 ## dependencies
 * Python 2.7.x
 * Python module to install: `requests`,`bs4`

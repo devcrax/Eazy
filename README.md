@@ -7,11 +7,11 @@
 
 You can use this Framework on your website to check the security of your website by finding the vulnerability in your website or you can use this tool to get admin panel search. SQL injection by dork as well as collecting information and encrypting Hash<br><br>
 ✔ Features<br>
-[Information modules](https://www.google.co.id/amp/s/www.collinsdictionary.com/amp/english/information-gathering)<br>
 * port scanner<br>
 * traceroute using MTR<br>
 * nping / test ping<br>
 * subdomain scanner<br>
+* wordpress user enumerate<br>
 * and more..
 
 

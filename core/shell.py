@@ -16,7 +16,7 @@ from module.encdec     import *
 from module.scanner    import *
 from module.wp_exp     import *
 from module.xssy       import *
-from module.prestashop import exp
+from module.prestashop import *
 from module.rce        import rcevuln
 from module.joomsql    import j_sql
 from module.wp_user    import user_scan
@@ -79,7 +79,11 @@ def debby_anggraini():
             elif wibu[0] == 'wp_sym_exp':
                 exploit_wp(arg['-u'],arg['-f'])
             elif wibu[0] == 's3_exp':
-                exp(arg['-u'],arg['-f']).sss_ex()
+                sss_ex(arg['-u'],arg['-f'])
+            elif wibu[0] == 'ppa_exp':
+                ppa_ex(arg['-u'],arg['-f'])
+            elif wibu[0] == 'hpa_exp':
+                hpa_ex(arg['-u'],arg['-f'])
             # scanner module
             elif wibu[0] == 'lfi_scan':
                 lfiscan(arg['-u'])

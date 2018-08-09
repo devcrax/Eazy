@@ -61,7 +61,9 @@ def show_modules(t = None):
    {0}
    prestashop      description{1}
    ----------      -----------
-   s3_exp          Simple slide show exploiter.
+   s3_exp          Simple slide show exploit.
+   ppa_exp         Product page adverts exploit.
+   hpa_exp         Home Page advertise exploit.
 """)
     if t == 'wibu bau bawang':
           printf("""{0} encryption        description{1}

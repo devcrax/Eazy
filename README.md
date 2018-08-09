@@ -59,4 +59,4 @@ just type <code>help</code> or <code>help more</code>
 * added 2 scanner: xss payloads scanner, Remote command Excecution scanner<br>
 * update payloads<br>
 <b>August 9, 2018</b><br>
-* added 1 exploit: simple slide show exploiter
+* added 4 exploit: simple slide show exploit, Product page exploit, Home Page advertise exploit.<br>

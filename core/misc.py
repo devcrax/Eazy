@@ -16,76 +16,76 @@ def printf(msg,code = 0):
 def show_modules(t = None):
     if t == None or t == 'wibu bau bawang':
           printf("""{0}
- scanner           description{1}
- -------           -----------
- dork              dork scanner with Sqli testing.
- traceroute        traceroute using MRT.
- nping             test ping/Nping.
- dns_lookup        dns lookup.
- reverse_dns       reverse dns lookup.
- host_search       find dns host records.
- shared_dns        find shared dns servers.
- zone_test         zone transfer test.
- whois             whois lookup.
- geoip             Ip location lookup.
- reverse_ip        reverse ip lookup.
- port              tcp port scan.
- subnet            subnet lookup.
- http_headers      http headers check.
- pagelinks         extract page link from page.
- mxrecords         find mx records.
- domain_age        domain age checker.
- whatcms           Check Content Management System (CMS).
- subdomain         subdomain scanner using AXFR technique.
- honeypot          honeypot detector.
- nmap              advanced nmap.
- dirscan           directory scanner.
- shell             scan available shell on websites.
- hashbuster        online hash scanner/decrypter.
- adfin             search admin pages.
- upload            search upload pages.
- wpscan            wordpress plugins scanners.
- lfi_scan          scan Local File Inclusion vulnerabilities.
- joom_sql_scan     joomla sqli scanner.
- xss_scan          XSS payload scanner (GET method).
- rce_scan          remote code/command excecution scanner.
+ scanner            description{1}
+ -------            -----------
+ dork               dork scanner with Sqli testing.
+ traceroute         traceroute using MRT.
+ nping              test ping/Nping.
+ dns_lookup         dns lookup.
+ reverse_dns        reverse dns lookup.
+ host_search        find dns host records.
+ shared_dns         find shared dns servers.
+ zone_test          zone transfer test.
+ whois              whois lookup.
+ geoip              Ip location lookup.
+ reverse_ip         reverse ip lookup.
+ port               tcp port scan.
+ subnet             subnet lookup.
+ http_headers       http headers check.
+ pagelinks          extract page link from page.
+ mxrecords          find mx records.
+ domain_age         domain age checker.
+ whatcms            Check Content Management System (CMS).
+ subdomain          subdomain scanner using AXFR technique.
+ honeypot           honeypot detector.
+ nmap               advanced nmap.
+ dirscan            directory scanner.
+ shell              scan available shell on websites.
+ hashbuster         online hash scanner/decrypter.
+ adfin              search admin pages.
+ upload             search upload pages.
+ wpscan             wordpress plugins scanners.
+ lfi_scan           scan Local File Inclusion vulnerabilities.
+ joom_sql_scan      joomla sqli scanner.
+ xss_scan           XSS payload scanner (GET method).
+ rce_scan           remote code/command excecution scanner.
  {0}
  exploit{1}
  =======
  {0}
-   wordpress       description{1}
-   ---------       -----------
-   wp_sym_exp      Wordpress WP Symposium 14.11 Upload Vulnerability.
-   user_pro        wordpress userpro vulnerability scanner.
-   wp_user         Wordpress users enumerate bypass to get the website users.
-   {0}
-   prestashop      description{1}
-   ----------      -----------
-   s3_exp          Simple slide show exploit.
-   ppa_exp         Product page adverts exploit.
-   hpa_exp         Home Page advertise exploit.
+  wordpress         description{1}
+  ---------         -----------
+  wp_sym_exp        Wordpress WP Symposium 14.11 Upload Vulnerability.
+  user_pro          wordpress userpro vulnerability scanner.
+  wp_user           Wordpress users enumerate bypass to get the website users.
+  {0}
+  prestashop        description{1}
+  ----------        -----------
+  pres_simple_exp   Simple slide show exploit.
+  pres_product_exp  Product page adverts exploit.
+  pres_home_exp     Home Page advertise exploit.
 """)
     if t == 'wibu bau bawang':
-          printf("""{0} encryption        description{1}
- ----------        -----------
- base16            base16 encryption.
- base32            base32 encryption.
- base64            base64 encryption.
- bin               binnary.
- decimal           decimal.
- hex               hexadecimal.
- rev               reverse strings.
- rot13             ROT 13 cipher.
+          printf("""{0}   encryption         description{1}
+ ----------         -----------
+ base16             base16 encryption.
+ base32             base32 encryption.
+ base64             base64 encryption.
+ bin                binnary.
+ decimal            decimal.
+ hex                hexadecimal.
+ rev                reverse strings.
+ rot13              ROT 13 cipher.
  {0}
- hash              description{1}
- ----              -----------
- md4               md4 hashing.
- md5               md5 hashing.
- sha1              sha1 hashing.
- sha224            sha224 hashing.
- sha256            sha256 hashing.
- sha384            sha384 hashing.
- sha512            sha512 hashing.
- ripemd160         ripemd160 hashing.
- whirlpool         whirlpool hashing.
+ hash               description{1}
+ ----               -----------
+ md4                md4 hashing.
+ md5                md5 hashing.
+ sha1               sha1 hashing.
+ sha224             sha224 hashing.
+ sha256             sha256 hashing.
+ sha384             sha384 hashing.
+ sha512             sha512 hashing.
+ ripemd160          ripemd160 hashing.
+ whirlpool          whirlpool hashing.
 """)

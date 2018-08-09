@@ -9,7 +9,7 @@ from module.encdec import *
 from core.misc     import printf
 
 finder_array = ['adfin','upload','shell','dirscan','wpscan','user_pro','lfi_scan','joom_sql_scan','xss_scan','rce_scan']
-exp = ['s3_exp','wp_sym_exp']
+exp = ['s3_exp','wp_sym_exp','ppa_exp','hpa_exp']
 def hell(text,name):
     printf('\nUsage: ' + str(name) + ' [arguments]\n\noptional arguments:\n  -h, --help\tshow this help message\n' + text)
 def usage(name):

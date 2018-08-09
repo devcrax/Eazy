@@ -50,7 +50,8 @@ just type <code>help</code> or <code>help more</code>
 <br>
 <b>Eazy is licensed under the [MIT License](https://github.com/CiKu370/Eazy/blob/master/LICENSE)</b>
 <br>
-<h3>changelog</h4>
+<br>
+<h2>changelog</h2>
 <b>August 7, 2018</b><br>
 * added 2 scanner: LFI scanner,joomla sql scanner<br>
 * added 2 exploit: Wp_Symposium_exploit, wp_user_enumerate<br>
@@ -58,3 +59,5 @@ just type <code>help</code> or <code>help more</code>
 <b>August 8, 2018</b><br>
 * added 2 scanner: xss payloads scanner, Remote command Excecution scanner<br>
 * update payloads
+<b>August 9, 2018</b><br>
+* added 1 exploit: simple slide show exploiter

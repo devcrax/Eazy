@@ -15,7 +15,7 @@ You can use this Framework on your website to check the security of your website
 * and more..
 
 <h2>Video</h2>
-<a href="https://www.youtube.com/watch?v=JJGjvodMVe0">< style="max-width:100%;"></a>
+<a href="https://www.youtube.com/watch?v=JJGjvodMVe0"><img src=''></a>
  
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
 ```

@@ -38,7 +38,7 @@ Download Eazy
 Extract Eazy into Desktop
 Open CMD and type the following commands:
 cd Desktop/Eazy-master/
-python2
+python2 Eazy.py
 ```
 ## dependencies
 * Python 2.7.x

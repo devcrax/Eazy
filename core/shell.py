@@ -6,22 +6,23 @@
 
 # import modules
 import os
-from core.parse      import toxic
-from core.banner     import banner
-from core.misc       import *
-from core.complete   import *
-from module.webkit   import *
-from module.brute    import *
-from module.encdec   import *
-from module.scanner  import *
-from module.wp_exp   import *
-from module.xssy     import *
-from module.rce      import rcevuln
-from module.joomsql  import j_sql
-from module.wp_user  import user_scan
-from module.userpro  import check_vuln
-from module.nmap     import bintari as debby_lovlov
-from core.error      import *
+from core.parse        import toxic
+from core.banner       import banner
+from core.misc         import *
+from core.complete     import *
+from module.webkit     import *
+from module.brute      import *
+from module.encdec     import *
+from module.scanner    import *
+from module.wp_exp     import *
+from module.xssy       import *
+from module.prestashop import exp
+from module.rce        import rcevuln
+from module.joomsql    import j_sql
+from module.wp_user    import user_scan
+from module.userpro    import check_vuln
+from module.nmap       import bintari as debby_lovlov
+from core.error        import *
 
 # shell script
 def debby_anggraini():
@@ -77,6 +78,8 @@ def debby_anggraini():
                 user_scan(arg['-u'],arg['-n'])
             elif wibu[0] == 'wp_sym_exp':
                 exploit_wp(arg['-u'],arg['-f'])
+            elif wibu[0] == 's3_exp':
+                exp(arg['-u'],arg['-f']).sss_ex()
             # scanner module
             elif wibu[0] == 'lfi_scan':
                 lfiscan(arg['-u'])

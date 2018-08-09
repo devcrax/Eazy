@@ -55,9 +55,13 @@ def show_modules(t = None):
  {0}
    wordpress       description{1}
    ---------       -----------
-   wp_sym_exp      Wordpress WP Symposium 14.11 Shell Upload Vulnerability.
+   wp_sym_exp      Wordpress WP Symposium 14.11 Upload Vulnerability.
    user_pro        wordpress userpro vulnerability scanner.
    wp_user         Wordpress users enumerate bypass to get the website users.
+   {0}
+   prestashop      description{1}
+   ----------      -----------
+   s3_exp          Simple slide show exploiter.
 """)
     if t == 'wibu bau bawang':
           printf("""{0} encryption        description{1}

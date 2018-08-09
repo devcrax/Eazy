@@ -1,4 +1,4 @@
-<center><h1>Eazy Framework </h1>:<h3>web aplication scanner</h3></center>
+<center><h1>Eazy Framework </h1></center>
 <img align="left" width="120" height="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfEPSuQyr9zsm0pxBeOeFsR52J95TqCnvhm-9dacZi_k00ze91">
 <p><br><i><b>best framework for information gathering<br>pentesting and web aplication scanner.</b></i><br><br><br></p> 
 
@@ -15,7 +15,8 @@ You can use this Framework on your website to check the security of your website
 * and more..
 
 <h2>Video</h2>
-<a href="https://www.youtube.com/watch?v=JJGjvodMVe0"><img src=''></a>
+<a href="https://www.youtube.com/watch?v=JJGjvodMVe0"><img src="https://i.imgur.com/5B96biH.png" style="max-width:100%;"></a>
+ 
  
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
 ```

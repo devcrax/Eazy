@@ -58,6 +58,6 @@ just type <code>help</code> or <code>help more</code>
 * logo change<br>
 <b>August 8, 2018</b><br>
 * added 2 scanner: xss payloads scanner, Remote command Excecution scanner<br>
-* update payloads
+* update payloads<br>
 <b>August 9, 2018</b><br>
 * added 1 exploit: simple slide show exploiter

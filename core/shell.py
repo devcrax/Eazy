@@ -78,11 +78,11 @@ def debby_anggraini():
                 user_scan(arg['-u'],arg['-n'])
             elif wibu[0] == 'wp_sym_exp':
                 exploit_wp(arg['-u'],arg['-f'])
-            elif wibu[0] == 's3_exp':
+            elif wibu[0] == 'simple_slide_show_exp':
                 sss_ex(arg['-u'],arg['-f'])
-            elif wibu[0] == 'ppa_exp':
+            elif wibu[0] == 'product_page_advert_exp':
                 ppa_ex(arg['-u'],arg['-f'])
-            elif wibu[0] == 'hpa_exp':
+            elif wibu[0] == 'home_page_advert_exp':
                 hpa_ex(arg['-u'],arg['-f'])
             # scanner module
             elif wibu[0] == 'lfi_scan':

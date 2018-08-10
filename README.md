@@ -14,6 +14,10 @@ You can use this Framework on your website to check the security of your website
 * wordpress user enumerate<br>
 * and more..
  
+ <h2>Video</h2>
+<a href="https://www.youtube.com/watch?v=va81ko_5MWg"><img src="https://i.imgur.com/QbuTaQx_d.jpg?maxwidth=10000&shape=thumb&fidelity=medium" style="max-width:100%;"></a>
+
+
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
 ```
 git clone https://github.com/Ciku370/Eazy.git
